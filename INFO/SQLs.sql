@@ -1,0 +1,22 @@
+
+CREATE TABLE contacts (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+
+CREATE TABLE IF NOT EXISTS roles
+( id BIGINT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
+
+CREATE TABLE IF NOT EXISTS contact_roles
+( user_id BIGINT,
+  role_id BIGINT
+);
